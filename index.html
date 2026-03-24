@@ -5,25 +5,24 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Sri Vidya Garimella - Software Engineer</title>
-  <meta name="description" content="Software Engineer with 2+ years of experience in Java, Spring Boot, React.js, Azure, AWS, and AI/LLM. Full-stack developer passionate about building scalable, cloud-native applications.">
-  <meta name="keywords" content="Software Engineer, Full Stack Developer, Java, Spring Boot, React.js, Azure, AWS, AI, LLM, Sri Vidya Garimella">
+  <meta name="description" content="Software Engineer with 2+ years of experience in Java, Spring Boot, React.js, Azure, AWS, and AI/LLM.">
+  <meta name="keywords" content="Software Engineer, Full Stack Developer, Java, Spring Boot, React.js, Azure, AWS, AI, LLM">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://Srividya25.github.io/SRIVIDYA-PORTFOLIO/">
+  <meta property="og:url" content="https://Srividya25.github.io/portfolio/">
   <meta property="og:title" content="Sri Vidya Garimella - Software Engineer">
   <meta property="og:description" content="Software Engineer with 2+ years of experience in Java, Spring Boot, React.js, Azure, AWS, and AI/LLM.">
-  <meta property="og:image" content="https://Srividya25.github.io/SRIVIDYA-PORTFOLIO/assets/img/favicon.svg?v=3">
+  <meta property="og:image" content="https://Srividya25.github.io/portfolio/assets/img/favicon.svg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sri Vidya Garimella - Software Engineer">
   <meta name="twitter:description" content="Software Engineer with 2+ years of experience in Java, Spring Boot, React.js, Azure, AWS, and AI/LLM.">
-  <meta name="twitter:image" content="https://Srividya25.github.io/SRIVIDYA-PORTFOLIO/assets/img/favicon.svg?v=3">
+  <meta name="twitter:image" content="https://Srividya25.github.io/portfolio/assets/img/favicon.svg">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.svg?v=3" type="image/svg+xml" rel="icon">
-  <link href="assets/img/favicon.svg?v=3" type="image/x-icon" rel="shortcut icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -40,14 +39,411 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/recommendations.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Custom Page Styles -->
+  <style>
+    /* About Section Styles */
+    .about-points {
+      text-align: left;
+      max-width: 100%;
+      margin: 20px 0;
+      padding-left: 0;
+    }
+
+    .about-points p {
+      margin-bottom: 18px;
+      line-height: 1.8;
+      color: var(--default-color);
+      padding-left: 20px;
+      position: relative;
+      font-size: 15px;
+    }
+
+    .about-points p::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    /* Resume Section Styles */
+    .resume-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #3b82f6;
+      display: inline-block;
+    }
+    
+    .resume-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-left: 4px solid #3b82f6;
+      transition: all 0.3s ease;
+    }
+    
+    .resume-item:hover {
+      box-shadow: 0 8px 30px rgba(52,183,167,0.12);
+      transform: translateX(5px);
+    }
+    
+    .resume-item h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 5px;
+    }
+    
+    .resume-item h5 {
+      font-size: 14px;
+      font-weight: 500;
+      color: #3b82f6;
+      margin-bottom: 8px;
+    }
+    
+    .resume-item em {
+      font-size: 14px;
+      color: #666;
+      font-style: normal;
+    }
+    
+    .resume-item ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+      position: relative;
+    }
+    
+    .resume-item ul li {
+      padding: 12px 0 12px 35px;
+      font-size: 14px;
+      color: #555;
+      position: relative;
+      border-left: 2px solid #e0e0e0;
+      margin-left: 8px;
+    }
+    
+    .resume-item ul li:last-child {
+      border-left: 2px solid transparent;
+    }
+    
+    .resume-item ul li::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 18px;
+      width: 12px;
+      height: 12px;
+      background: #3b82f6;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #3b82f6;
+    }
+
+    /* Certifications Section Styles */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 30px 0;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    
+    .cert-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      background: #fff;
+      width: 100%;
+      height: 180px;
+    }
+    
+    .cert-card:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+    
+    .cert-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .cert-card:hover .cert-thumb {
+      transform: scale(1.08);
+    }
+    
+    .cert-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.75);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .cert-card:hover .cert-overlay {
+      opacity: 1;
+    }
+    
+    .cert-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #fff;
+      color: #333;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transform: translateY(15px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .cert-card:hover .cert-btn {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .cert-btn:hover {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    /* Projects Section Styles */
+    .projects-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 30px !important;
+      padding: 30px 0 !important;
+    }
+    .project-card {
+      background: #1e293b !important;
+      border-radius: 16px !important;
+      padding: 35px 25px !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      text-decoration: none !important;
+      opacity: 1 !important;
+      transition: all 0.3s ease !important;
+      border: 1px solid rgba(148, 163, 184, 0.1) !important;
+    }
+    .project-card::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, #94a3b8, #cbd5e1, #94a3b8) !important;
+      background-size: 200% 100% !important;
+      animation: shimmer 4s linear infinite !important;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0 !important; }
+      100% { background-position: 200% 0 !important; }
+    }
+    .project-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+      border-color: rgba(148, 163, 184, 0.2) !important;
+    }
+    .project-card:hover .project-icon-wrapper,
+    .project-card:hover h3,
+    .project-card:hover p,
+    .project-card:hover .project-tags {
+      opacity: 0.2 !important;
+      transition: opacity 0.3s ease !important;
+    }
+    .project-card .github-overlay {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) scale(0) !important;
+      opacity: 0 !important;
+      transition: all 0.3s ease !important;
+      z-index: 10 !important;
+    }
+    .project-card .github-overlay i {
+      font-size: 55px !important;
+      color: #94a3b8 !important;
+    }
+    .project-card:hover .github-overlay {
+      transform: translate(-50%, -50%) scale(1) !important;
+      opacity: 1 !important;
+    }
+    .project-icon-wrapper {
+      width: 75px !important;
+      height: 75px !important;
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+      border-radius: 16px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 auto 22px !important;
+      transition: all 0.3s ease !important;
+    }
+    .project-card:hover .project-icon-wrapper {
+      transform: scale(1.05) !important;
+    }
+    .project-icon-wrapper i {
+      font-size: 32px !important;
+      color: #e2e8f0 !important;
+    }
+    .project-card h3 {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      color: #e2e8f0 !important;
+      margin-bottom: 10px !important;
+      transition: color 0.3s ease !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .project-card:hover h3 {
+      color: #94a3b8 !important;
+    }
+    .project-card p {
+      font-size: 13px !important;
+      color: #94a3b8 !important;
+      line-height: 1.6 !important;
+      margin-bottom: 18px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .project-tags {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .project-tags span {
+      font-size: 11px !important;
+      color: #94a3b8 !important;
+      background: rgba(148, 163, 184, 0.1) !important;
+      padding: 5px 12px !important;
+      border-radius: 6px !important;
+      transition: all 0.3s ease !important;
+    }
+    .project-card:hover .project-tags span {
+      background: #64748b !important;
+      color: #f8fafc !important;
+    }
+
+    /* Contact Section Styles */
+    .info-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    
+    .info-wrap .info-item {
+      align-items: flex-start;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    }
+    
+    .info-wrap .info-item i {
+      font-size: 22px;
+      color: #3b82f6;
+      width: 50px;
+      height: 50px;
+      background: #e8f8f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      transition: all 0.3s;
+      flex-shrink: 0;
+    }
+    
+    .info-wrap .info-item div {
+      margin-left: 15px;
+    }
+    
+    .info-wrap .info-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .info-wrap .info-item p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .contact-form .form-control {
+      border-radius: 8px;
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s;
+    }
+    
+    .contact-form .form-control:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    .contact-form .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .contact-form .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 992px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr !important; }
+      .cert-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+      .cert-card { height: 160px; }
+    }
+
+    /* Navigation active state */
+    .navmenu a {
+      transition: color 0.3s;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -55,22 +451,20 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+      <a href="#hero" class="logo d-flex align-items-center me-auto me-xl-0">
         <h1 class="sitename">Sri Vidya</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="certifications.html">Certifications</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="recommendations.html">Recommendations</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#recommendations">Recommendations</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -93,12 +487,694 @@
           <div class="col-lg-8">
             <h2>Sri Vidya Garimella</h2>
             <p>Software Engineer | Full-Stack Developer | AI/LLM Enthusiast</p>
-            <a href="about.html" class="btn-get-started">About Me</a>
+            <a href="#about" class="btn-get-started">About Me</a>
           </div>
         </div>
       </div>
 
     </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+      </div>
+
+      <div class="container">
+        <div class="about-points">
+          <p>I am a Software Engineer with 2+ years of experience building full-stack applications using Java, Spring Boot, and React.js, with a strong focus on RESTful APIs, microservices, and integrating AI/LLM capabilities into backend systems. I hold a Master of Science in Software Engineering from George Mason University, Fairfax, VA, and a Bachelor of Engineering in Computer Science from Osmania University, Hyderabad, India.</p>
+          <p>Throughout my career, I have worked with programming languages including Java, Python, JavaScript, Kotlin, C, C++, SQL, HTML5, and CSS. I have hands-on experience with frameworks such as Spring Boot, React.js, Angular, Node.js, Next.js, Django, and Flask. I am familiar with databases like MySQL, PostgreSQL, MongoDB, and DynamoDB, and have consistently delivered solutions following Agile and Scrum methodologies.</p>
+          <p>In my current role as a Software Engineer at Progrite Systems, I built RESTful APIs for loan submission, document uploads, and status tracking backed by SQL. I engineered React.js dashboard components with WebSocket support for real-time updates, and designed a document intelligence service using OpenAI GPT API that reduced manual review effort by an estimated 40%. I also deployed containerized services using Docker and Kubernetes on Microsoft Azure with CI/CD pipelines via Maven and GitHub Actions.</p>
+          <p>During my time at George Mason University, I served as a Graduate Teaching Assistant for Data Structures and Algorithms in Java, guiding 30+ students to a 90% pass rate and boosting overall academic performance by 25%. As a Graduate Research Assistant, I built data preprocessing pipelines using Python, Django, and Flask, implemented anonymization techniques achieving 90% accuracy in de-identification, and applied regression and classification models using TensorFlow and Scikit-learn to identify behavioral trends in academic survey data.</p>
+          <p>At Digi Planet Techno Solutions, I developed a geolocation-based lending and borrowing web application using ReactJS and Spring Boot, integrated Twilio API for SMS push notifications leading to a 20% increase in user interactions, and optimized MySQL database schema contributing to a 95% improvement in user-facing performance.</p>
+          <p>I have led and contributed to projects like TaskMaster, a backend microservice using Node.js, TypeScript, and Kafka deployed on AWS EC2 with DevSecOps principles; a Cloud Enhanced Stock Screener leveraging AWS Lambda, Glue, RDS, S3, and QuickSight for interactive stock trend visualization; and a Full Stack Survey Management System using Angular, Spring Boot, and Kubernetes achieving a 95% improvement in UX.</p>
+          <p>My technical skill set spans Cloud Technologies including Microsoft Azure, AWS (EC2, S3, Lambda, RDS, Glue, QuickSight, DynamoDB), Kubernetes, and Terraform, as well as ML libraries such as TensorFlow, Scikit-learn, Keras, Pandas, NumPy, PySpark, and NLTK. I also work with tools like Git, Docker, Jenkins, Postman, Selenium, Splunk, Maven, and Gradle. My certifications include Spring MVC, Spring Boot and REST Controllers (2023) and PHP, Java and MySQL Training from IIT Bombay (2018), reflecting my commitment to continuous learning and high standards in software engineering.</p>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Sri Vidya Garimella">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Software Engineer</h2>
+            <p class="fst-italic py-3">
+              Full-Stack Developer passionate about building scalable, cloud-native applications with AI/LLM integration.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <p>> <strong>Phone:</strong> 571-307-0368</p>
+                <p>> <strong>Location:</strong> San Jose, CA</p>
+              </div>
+              <div class="col-lg-6">
+                <p>> <strong>Email:</strong> garimellasrividya25@gmail.com</p>
+                <p>> <strong>Degree:</strong> M.S. Software Engineering</p>
+              </div>
+            </div>
+            <p class="py-3">
+              Software Engineer with 2+ years of experience specializing in full-stack development, system design, and cloud computing, with a strong focus on delivering scalable and impactful software solutions.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>I am pleased to share an overview of my professional journey as a versatile software engineer proficient in advanced system design, cloud computing, and full-stack development.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Education</h3>
+
+            <div class="resume-item">
+              <h4>Master of Science in Software Engineering</h4>
+              <h5>August 2021 - May 2024</h5>
+              <p><em>George Mason University, Fairfax, VA</em></p>
+              <ul>
+                <li><strong>GPA:</strong> 3.7 / 4.0</li>
+                <li><strong>Relevant Coursework:</strong> Analysis of Algorithms, Data Mining, Machine Learning, Software Engineering for World Wide Web, Component based Software Development, User Interface Design and Development, Software Architecture and Design, Software Testing, Object Oriented Software Specification and Construction</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Bachelor of Engineering in Computer Science</h4>
+              <h5>August 2016 - May 2020</h5>
+              <p><em>Osmania University, Hyderabad, India</em></p>
+              <ul>
+                <li><strong>GPA:</strong> 3.6 / 4.0</li>
+                <li><strong>Relevant Coursework:</strong> Automata Languages and Computation, Logic and Switching Theory, Data Structures, Discrete Mathematics, Computer Organization, Programming Using Java, Microprocessors and Interfacing, Operating Systems, Artificial Intelligence, Database Management System, Computer Graphics</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+
+            <div class="resume-item">
+              <h4>Software Engineer</h4>
+              <h5>August 2024 – Present</h5>
+              <p><em>Progrite Systems, Inc., San Jose, CA</em></p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Graduate Teaching Assistant</h4>
+              <h5>January 2024 – December 2024</h5>
+              <p><em>Department of Information Science and Technology, George Mason University, Fairfax, VA</em></p>
+              <ul>
+                <li>Data Structures and Algorithms in Java AIT 512 (Spring 2024)<br>Instructor: Reza T. Hemayati</li>
+                <li>Rapid Development of Scalable Cloud Applications IT 390 (Fall 2024)<br>Instructor: Can X. Nguyen</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Graduate Research Assistant</h4>
+              <h5>August 2023 – May 2024</h5>
+              <p><em>George Mason University, Fairfax, VA</em></p>
+              <ul>
+                <li>Research on data preprocessing pipelines, machine learning, and survey data extraction using Python, Django, Flask, TensorFlow, and Scikit-learn<br>Professors: Mihai Boicu, Ioulia Rytikova</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Software Developer</h4>
+              <h5>January 2020 – July 2021</h5>
+              <p><em>Digi Planet Techno Solutions Pvt. Ltd., Hyderabad, TS</em></p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Technical Skills</h2>
+        <p>A comprehensive overview of my technical expertise</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="skills-grid">
+
+            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon-wrapper">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h3>Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-logo" alt="Java"><span>Java</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-logo" alt="Python"><span>Python</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-logo" alt="JavaScript"><span>JavaScript</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="skill-logo" alt="TypeScript"><span>TypeScript</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="skill-logo" alt="Kotlin"><span>Kotlin</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="skill-logo" alt="C"><span>C</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="skill-logo" alt="C++"><span>C++</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo" alt="MySQL"><span>SQL</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-logo" alt="HTML5"><span>HTML5</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-logo" alt="CSS"><span>CSS</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon-wrapper">
+              <i class="bi bi-layers"></i>
+            </div>
+            <h3>Frameworks</h3>
+            <div class="skill-items">
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="skill-logo" alt="Spring Boot"><span>Spring Boot</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-logo" alt="React.js"><span>React.js</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" class="skill-logo" alt="Angular"><span>Angular</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skill-logo" alt="Node.js"><span>Node.js</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="skill-logo" alt="Next.js"><span>Next.js</span></div>
+              <div class="skill-item"><div class="django-icon">dj</div><span>Django</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="skill-logo" alt="Flask"><span>Flask</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon-wrapper">
+              <i class="bi bi-cloud"></i>
+            </div>
+            <h3>Cloud & DevOps</h3>
+            <div class="skill-items">
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="skill-logo aws-logo" alt="AWS"><span>AWS</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="skill-logo" alt="Azure"><span>Azure</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="skill-logo" alt="Docker"><span>Docker</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" class="skill-logo" alt="Kubernetes"><span>Kubernetes</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" class="skill-logo" alt="Terraform"><span>Terraform</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" class="skill-logo" alt="Jenkins"><span>Jenkins</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="skill-logo" alt="GitHub"><span>GitHub Actions</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" class="skill-logo" alt="Maven"><span>Maven</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" class="skill-logo" alt="Gradle"><span>Gradle</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-icon-wrapper">
+              <i class="bi bi-database"></i>
+            </div>
+            <h3>Databases</h3>
+            <div class="skill-items">
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo" alt="MySQL"><span>MySQL</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-logo" alt="PostgreSQL"><span>PostgreSQL</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="skill-logo" alt="MongoDB"><span>MongoDB</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="skill-logo aws-logo" alt="DynamoDB"><span>DynamoDB</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-icon-wrapper">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3>ML & AI</h3>
+            <div class="skill-items">
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="skill-logo" alt="TensorFlow"><span>TensorFlow</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="skill-logo" alt="Scikit-learn"><span>Scikit-learn</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" class="skill-logo" alt="Keras"><span>Keras</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="skill-logo" alt="Pandas"><span>Pandas</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="skill-logo" alt="NumPy"><span>NumPy</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" class="skill-logo" alt="PySpark"><span>PySpark</span></div>
+              <div class="skill-item"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=50&h=50&fit=crop" class="skill-logo ai-logo" alt="LLMs"><span>LLMs</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="skill-logo" alt="LangChain"><span>LangChain</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-icon-wrapper">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h3>Tools</h3>
+            <div class="skill-items">
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-logo" alt="Git"><span>Git</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" class="skill-logo" alt="Postman"><span>Postman</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" class="skill-logo" alt="Selenium"><span>Selenium</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" class="skill-logo" alt="Kafka"><span>Kafka</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" class="skill-logo" alt="Hadoop"><span>Hadoop</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" class="skill-logo" alt="LaTeX"><span>LaTeX</span></div>
+              <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" class="skill-logo" alt="Jira"><span>Jira</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category-card leetcode-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="leetcode-header">
+              <div class="leetcode-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode">
+              </div>
+              <div class="leetcode-title">
+                <h3>LeetCode</h3>
+                <p class="leetcode-subtitle">@Srividya25</p>
+              </div>
+            </div>
+            
+            <div class="leetcode-body">
+              <div class="leetcode-stats-section">
+                <div class="leetcode-main-stat">
+                  <div class="circular-progress">
+                    <svg viewBox="0 0 100 100">
+                      <circle class="progress-bg" cx="50" cy="50" r="45"/>
+                      <circle class="progress-fill" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="257"/>
+                    </svg>
+                    <div class="progress-text">
+                      <span class="stat-number">359</span>
+                      <span class="stat-label">/ 3878 Solved</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <a href="https://leetcode.com/u/Srividya25/" target="_blank" class="leetcode-profile-btn">
+                  <i class="bi bi-box-arrow-up-right"></i> View Profile
+                </a>
+              </div>
+              
+              <div class="leetcode-right-section">
+                <div class="leetcode-breakdown">
+                  <h4>Problem Breakdown</h4>
+                  <div class="progress-row">
+                    <div class="progress-info">
+                      <span class="dot easy"></span>
+                      <span class="label">Easy</span>
+                      <span class="count">136/933</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-fill easy" style="width: 14.6%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="progress-row">
+                    <div class="progress-info">
+                      <span class="dot medium"></span>
+                      <span class="label">Medium</span>
+                      <span class="count">214/2029</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-fill medium" style="width: 10.5%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="progress-row">
+                    <div class="progress-info">
+                      <span class="dot hard"></span>
+                      <span class="label">Hard</span>
+                      <span class="count">9/916</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-fill hard" style="width: 0.98%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="leetcode-badges">
+                  <h4>Badges Earned</h4>
+                  <div class="badges-grid">
+                    <div class="badge-item">
+                      <div class="badge-icon gold"><i class="bi bi-calendar-check"></i></div>
+                      <span class="badge-name">365 Days</span>
+                    </div>
+                    <div class="badge-item">
+                      <div class="badge-icon silver"><i class="bi bi-calendar-event"></i></div>
+                      <span class="badge-name">100 Days</span>
+                    </div>
+                    <div class="badge-item">
+                      <div class="badge-icon bronze"><i class="bi bi-calendar3"></i></div>
+                      <span class="badge-name">50 Days</span>
+                    </div>
+                    <div class="badge-item">
+                      <div class="badge-icon green"><i class="bi bi-patch-check"></i></div>
+                      <span class="badge-name">LeetCode 75</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category-card systemdesign-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="leetcode-header">
+              <div class="leetcode-icon educative-icon">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+              <div class="leetcode-title">
+                <h3>System Design</h3>
+                <p class="leetcode-subtitle">Grokking the System Design Interview - Educative.io</p>
+              </div>
+            </div>
+            
+            <div class="leetcode-body">
+              <div class="leetcode-stats-section">
+                <div class="edu-badge">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <span>Course Completed</span>
+                  <small>Intermediate | 37 Lessons</small>
+                </div>
+                
+                <a href="https://www.educative.io/collection/lta/5668639101419520/5649050225344512" target="_blank" class="leetcode-profile-btn">
+                  <i class="bi bi-box-arrow-up-right"></i> View Course
+                </a>
+              </div>
+              
+              <div class="leetcode-right-section">
+                <div class="leetcode-breakdown">
+                  <h4>Key Concepts Mastered</h4>
+                  <div class="topics-grid">
+                    <span class="topic-tag"><i class="fas fa-expand-arrows-alt"></i><span>Scalability</span></span>
+                    <span class="topic-tag"><i class="fas fa-server"></i><span>Load Balancing</span></span>
+                    <span class="topic-tag"><i class="fas fa-database"></i><span>Caching</span></span>
+                    <span class="topic-tag"><i class="fas fa-project-diagram"></i><span>Data Partitioning</span></span>
+                    <span class="topic-tag"><i class="fas fa-search"></i><span>Indexing</span></span>
+                    <span class="topic-tag"><i class="fas fa-copy"></i><span>Redundancy & Replication</span></span>
+                    <span class="topic-tag"><i class="fas fa-database"></i><span>SQL vs NoSQL</span></span>
+                    <span class="topic-tag"><i class="fas fa-triangle"></i><span>CAP Theorem</span></span>
+                    <span class="topic-tag"><i class="fas fa-circle-notch"></i><span>Consistent Hashing</span></span>
+                    <span class="topic-tag"><i class="fas fa-exchange-alt"></i><span>Proxies</span></span>
+                    <span class="topic-tag"><i class="fas fa-users"></i><span>Quorum</span></span>
+                    <span class="topic-tag"><i class="fas fa-crown"></i><span>Leader & Follower</span></span>
+                    <span class="topic-tag"><i class="fas fa-filter"></i><span>Bloom Filters</span></span>
+                    <span class="topic-tag"><i class="fas fa-heartbeat"></i><span>Heartbeat</span></span>
+                    <span class="topic-tag"><i class="fas fa-comments"></i><span>Real-time Communication</span></span>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Certifications</h2>
+        <p>Professional certifications and completed courses</p>
+      </div>
+
+      <div class="container">
+        <div class="cert-grid">
+
+          <div class="cert-card">
+            <img src="assets/img/coursera-certificate.jpg" alt="Certificate" class="cert-thumb">
+            <div class="cert-overlay">
+              <a href="assets/img/coursera-certificate.jpg" target="_blank" class="cert-btn">
+                <i class="fas fa-image"></i> View Image
+              </a>
+              <a href="https://coursera.org/share/a8331193743af22c079b415e43aa6fa5" target="_blank" class="cert-btn">
+                <i class="fas fa-link"></i> Verification
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="assets/img/iit-certificate.jpg" alt="Certificate" class="cert-thumb">
+            <div class="cert-overlay">
+              <a href="assets/img/iit-certificate.jpg" target="_blank" class="cert-btn">
+                <i class="fas fa-image"></i> View Image
+              </a>
+              <a href="#" target="_blank" class="cert-btn">
+                <i class="fas fa-link"></i> Verification
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="assets/img/java-certificate.jpg" alt="Certificate" class="cert-thumb">
+            <div class="cert-overlay">
+              <a href="assets/img/java-certificate.jpg" target="_blank" class="cert-btn">
+                <i class="fas fa-image"></i> View Image
+              </a>
+              <a href="#" target="_blank" class="cert-btn">
+                <i class="fas fa-link"></i> Verification
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Certifications Section -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>My Projects</h2>
+        <p>Click on a project to view on GitHub</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="projects-grid">
+
+          <a href="https://github.com/Srividya25" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-list-task"></i>
+            </div>
+            <h3>TaskMaster</h3>
+            <p>Task management application for organizing and tracking personal and team tasks efficiently</p>
+            <div class="project-tags">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3>Cloud Enhanced Stock Screener</h3>
+            <p>Real-time stock screening tool with cloud-based data processing and analytics</p>
+            <div class="project-tags">
+              <span>AWS</span>
+              <span>Python</span>
+              <span>React</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-clipboard-data"></i>
+            </div>
+            <h3>Full Stack Survey Management System</h3>
+            <p>Comprehensive survey creation, distribution, and analysis platform with real-time reporting</p>
+            <div class="project-tags">
+              <span>Angular</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25/safe-python-executor" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h3>Safe Python Executor</h3>
+            <p>API for safely executing Python scripts with Docker-based isolation</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Docker</span>
+              <span>API</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25/Twitter-Sentiment-Analysis" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-chat-left-quote"></i>
+            </div>
+            <h3>Twitter Sentiment Analysis</h3>
+            <p>Data mining project for analyzing and classifying sentiment from Twitter data</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Data Mining</span>
+              <span>NLP</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25/Train-Wheel-Defect-System" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-train-front"></i>
+            </div>
+            <h3>Train Wheel Defect Detection</h3>
+            <p>Web-application that detects wheel defect types based on pressure sensor values</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Machine Learning</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Projects Section -->
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="recommendations section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recommendations</h2>
+        <p>Letters of recommendation from professors and colleagues</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="recommendations-grid single-recommendation">
+
+          <div class="recommendation-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="recommendation-quote">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <p class="quote-text">My name is Mihai Boicu, and I am an Associate Professor at George Mason University, with expertise in Artificial Intelligence, System Prototyping, and Engineering Education. I had the pleasure to mentor Ms. Garimella Sri Vidya starting in FALL 2023 when she joined my research group and was involved in various projects and activities. Together with Dr. Ioulia Rytikova, I also had the pleasure to guide Ms. Vidya in an engineering education project titled: "Anti-racism, Inclusion, Diversity and Equity in Database Curriculum Through Group Research Projects on Historical, Social and Ethical Database Related Topics Curriculum Grant."</p>
+              <p class="quote-text">Ms. Vidya has a rich contribution in the research group performing a diverse range of research related activities: literature review, curriculum development, test question design and validation, educational experiment design, data analysis and interpretation. Some highlights of her activity are the design and implementation of a pool of questions to randomly check reading comprehension for required reading materials and collection, analysis and presentation of survey data.</p>
+              <p class="quote-text">One aspect that I observed for Ms. Vidya is her extensive knowledge and skills in data analysis that is doubled by her eagerness to learn new things and expand her expertise. She is meticulous in data collection, detailed in data analysis and synthetic in data presentation, showing proficiency in Python programming, data pre-processing, and matplotlib. She worked diligently to create intuitive graphs to explain the results of analyzing complex data sets.</p>
+              <p class="quote-text">Also, Ms. Vidya showed dependable soft collaboration skills as she worked all the time in a research team and continuously communicated and collaborated with other team members.</p>
+            </div>
+            <div class="recommendation-author">
+              <div class="author-avatar">
+                <i class="bi bi-person-fill"></i>
+              </div>
+              <div class="author-info">
+                <h4>Dr. Mihai Boicu</h4>
+                <p class="author-title">Associate Professor & Co-Director</p>
+                <p class="author-university">George Mason University</p>
+                <p class="author-contact">mboicu@gmu.edu</p>
+              </div>
+            </div>
+            <div class="recommendation-actions">
+              <a href="https://www.linkedin.com/in/srividyagarimella/recommendations" target="_blank" class="view-letter-btn">
+                <i class="bi bi-linkedin"></i> View on LinkedIn
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="add-testimonial-section" data-aos="fade-up" data-aos-delay="200">
+          <p class="add-text">Have you worked with Sri Vidya? Share your experience!</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAHau_Weuesqpc7aFsMsb2CuX_Yc7ZXMmIeE11zI99uYAf1Q/viewform?usp=sharing" target="_blank" class="add-testimonial-btn">
+            <i class="fas fa-pen"></i> Add Your Testimonial
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- /Recommendations Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get in touch with me</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Location</h3>
+                  <p>San Jose, CA 95126</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>571-307-0368</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>garimellasrividya25@gmail.com</p>
+                  <p>gsrividy@gmu.edu</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-linkedin flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p>linkedin.com/in/srividyagarimella</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="https://formspree.io/f/meerygyn" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="200" id="contact-form-main" autocomplete="off">
+              <input type="hidden" name="_next" value="thanks.html">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required autocomplete="off">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required autocomplete="off">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required autocomplete="off">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required autocomplete="off"></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
 
   </main>
 
@@ -117,15 +1193,11 @@
 
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -134,8 +1206,49 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Clear form on page show and load
+    (function() {
+      var form = document.getElementById('contact-form-main');
+      if (form) {
+        form.reset();
+      }
+      
+      window.addEventListener('pageshow', function() {
+        var form = document.getElementById('contact-form-main');
+        if (form) {
+          form.reset();
+        }
+      });
+    })();
+
+    // Active navigation highlight
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.navmenu a');
+      
+      window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
