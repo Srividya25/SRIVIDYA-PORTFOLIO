@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects - Sri Vidya Garimella</title>
+  <meta name="description" content="Software Projects - TaskMaster, Cloud Enhanced Stock Screener, Full Stack Survey Management System, Sentiment Analysis, Train Defect Detection">
+  <meta name="keywords" content="Software Engineer, Projects, TaskMaster, Stock Screener, Survey Management, React, Spring Boot">
+
+  <link href="assets/img/favicon.svg?v=2" type="image/svg+xml" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css?v=4" rel="stylesheet">
+  <style>
+    .projects-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 30px !important;
+      padding: 30px 0 !important;
+    }
+    .project-card {
+      background: #1e293b !important;
+      border-radius: 16px !important;
+      padding: 35px 25px !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      text-decoration: none !important;
+      opacity: 1 !important;
+      transition: all 0.3s ease !important;
+      border: 1px solid rgba(148, 163, 184, 0.1) !important;
+    }
+    .project-card::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, #94a3b8, #cbd5e1, #94a3b8) !important;
+      background-size: 200% 100% !important;
+      animation: shimmer 4s linear infinite !important;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0 !important; }
+      100% { background-position: 200% 0 !important; }
+    }
+    .project-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+      border-color: rgba(148, 163, 184, 0.2) !important;
+    }
+    .project-card:hover .project-icon-wrapper,
+    .project-card:hover h3,
+    .project-card:hover p,
+    .project-card:hover .project-tags {
+      opacity: 0.2 !important;
+      transition: opacity 0.3s ease !important;
+    }
+    .project-card .github-overlay {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) scale(0) !important;
+      opacity: 0 !important;
+      transition: all 0.3s ease !important;
+      z-index: 10 !important;
+    }
+    .project-card .github-overlay i {
+      font-size: 55px !important;
+      color: #94a3b8 !important;
+    }
+    .project-card:hover .github-overlay {
+      transform: translate(-50%, -50%) scale(1) !important;
+      opacity: 1 !important;
+    }
+    .project-icon-wrapper {
+      width: 75px !important;
+      height: 75px !important;
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+      border-radius: 16px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 auto 22px !important;
+      transition: all 0.3s ease !important;
+    }
+    .project-card:hover .project-icon-wrapper {
+      transform: scale(1.05) !important;
+    }
+    .project-icon-wrapper i {
+      font-size: 32px !important;
+      color: #e2e8f0 !important;
+    }
+    .project-card h3 {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      color: #e2e8f0 !important;
+      margin-bottom: 10px !important;
+      transition: color 0.3s ease !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .project-card:hover h3 {
+      color: #94a3b8 !important;
+    }
+    .project-card p {
+      font-size: 13px !important;
+      color: #94a3b8 !important;
+      line-height: 1.6 !important;
+      margin-bottom: 18px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .project-tags {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .project-tags span {
+      font-size: 11px !important;
+      color: #94a3b8 !important;
+      background: rgba(148, 163, 184, 0.1) !important;
+      padding: 5px 12px !important;
+      border-radius: 6px !important;
+      transition: all 0.3s ease !important;
+    }
+    .project-card:hover .project-tags span {
+      background: #64748b !important;
+      color: #f8fafc !important;
+    }
+    @media (max-width: 992px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+
+<body class="projects-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Sri Vidya</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://linkedin.com/in/srividyagarimella" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Srividya25" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="projects" class="projects section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>My Projects</h2>
+        <p>Click on a project to view on GitHub</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="projects-grid">
+
+          <a href="https://github.com/Srividya25" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-list-task"></i>
+            </div>
+            <h3>TaskMaster</h3>
+            <p>Task management application for organizing and tracking personal and team tasks efficiently</p>
+            <div class="project-tags">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3>Cloud Enhanced Stock Screener</h3>
+            <p>Real-time stock screening tool with cloud-based data processing and analytics</p>
+            <div class="project-tags">
+              <span>AWS</span>
+              <span>Python</span>
+              <span>React</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-clipboard-data"></i>
+            </div>
+            <h3>Full Stack Survey Management System</h3>
+            <p>Comprehensive survey creation, distribution, and analysis platform with real-time reporting</p>
+            <div class="project-tags">
+              <span>Angular</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25/safe-python-executor" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h3>Safe Python Executor</h3>
+            <p>API for safely executing Python scripts with Docker-based isolation</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Docker</span>
+              <span>API</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25/Twitter-Sentiment-Analysis" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-chat-left-quote"></i>
+            </div>
+            <h3>Twitter Sentiment Analysis</h3>
+            <p>Data mining project for analyzing and classifying sentiment from Twitter data</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Data Mining</span>
+              <span>NLP</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Srividya25/Train-Wheel-Defect-System" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="github-overlay"><i class="bi bi-github"></i></div>
+            <div class="project-icon-wrapper">
+              <i class="bi bi-train-front"></i>
+            </div>
+            <h3>Train Wheel Defect Detection</h3>
+            <p>Web-application that detects wheel defect types based on pressure sensor values</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Sensors</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Sri Vidya Garimella. All Rights Reserved.</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://linkedin.com/in/srividyagarimella" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Srividya25" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
