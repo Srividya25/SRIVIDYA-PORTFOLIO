@@ -249,16 +249,15 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=2"></script>
 
   <script>
     // Clear form on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.querySelector('.contact-form');
-      if (form) {
-        form.reset();
+    window.onpageshow = function(event) {
+      if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+        document.querySelector('.contact-form').reset();
       }
-    });
+    };
   </script>
 
 </body>
