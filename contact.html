@@ -252,13 +252,20 @@
   <script src="assets/js/main.js?v=2"></script>
 
   <script>
-    // Always clear form when page loads
-    window.addEventListener('pageshow', function(event) {
+    // Clear form on page show and load
+    (function() {
       var form = document.getElementById('contact-form-main');
       if (form) {
         form.reset();
       }
-    });
+      
+      window.addEventListener('pageshow', function() {
+        var form = document.getElementById('contact-form-main');
+        if (form) {
+          form.reset();
+        }
+      });
+    })();
   </script>
 
 </body>
